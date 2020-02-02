@@ -39,7 +39,7 @@ system('clear')
 
 
 
-#reading data Right Now Tamilnadu Petro only
+#reading data CII dataset
 state_sec = pd.read_csv("ciids.csv")
 print state_sec.head()
 #print '\n Data Types:'
@@ -54,3 +54,16 @@ print (state_sec.max())
 print ("*** Mode value***")
 print (state_sec.mode())
 print ("*** Rannge ***")
+
+
+# what to plot... Kindly check the csv is location. As of now I am using my local file
+data = np.genfromtxt('/home/alok/projects/cii/ciids.csv', delimiter=',', names=['x', 'y'])
+# Initialize a Figure
+fig = plt.figure()
+plt.plot(state_sec['year'],'g^', state_sec['cii'],'ro')
+
+plt.title('Stock Price chart')
+plt.ylabel('Price')
+plt.xlabel('X axis')
+plt.grid(True)
+plt.show()
