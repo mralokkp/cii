@@ -61,10 +61,13 @@ print state_sec.columns
 data = np.genfromtxt('/home/alok/projects/cii/ciids.csv', delimiter=',', names=['x', 'y'])
 # Initialize a Figure
 fig = plt.figure()
-plt.plot(state_sec['Year'],'g^', state_sec['CII'],'ro')
+
+#plt.plot(state_sec['Year'],'g^', state_sec['CII'],'ro',)
+plt.plot(state_sec['CII'],'g^') #Just need CII only
 
 plt.title('Year wise Cost inflation Index')
-plt.ylabel('Year')
-plt.xlabel('Cost inflation Index')
-plt.grid(False)
+plt.ylabel('Cost inflation Index')
+plt.xlabel('Year')
+plt.grid(True) # Show Grid
+
 plt.show()
