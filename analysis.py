@@ -62,8 +62,8 @@ data = np.genfromtxt('/home/alok/projects/cii/ciids.csv', delimiter=',', names=[
 fig = plt.figure()
 plt.plot(state_sec['year'],'g^', state_sec['cii'],'ro')
 
-plt.title('Stock Price chart')
-plt.ylabel('Price')
-plt.xlabel('X axis')
+plt.title('Cost inflation Index w.r.t year chart')
+plt.ylabel('Years')
+plt.xlabel('CII ')
 plt.grid(True)
 plt.show()
