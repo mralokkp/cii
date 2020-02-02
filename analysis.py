@@ -40,30 +40,31 @@ system('clear')
 
 
 #reading data CII dataset
-state_sec = pd.read_csv("ciids.csv")
+state_sec = pd.read_csv("ciids.csv") #Importing data
 print state_sec.head()
+print state_sec.columns
 #print '\n Data Types:'
 #print state_sec.dtypes
 
-print ("*** Averadge value***")
-print (state_sec.mean())
-print ("*** Minimum value***")
-print (state_sec.min())
-print ("*** Maximum value***")
-print (state_sec.max())
-print ("*** Mode value***")
-print (state_sec.mode())
-print ("*** Rannge ***")
+#print ("*** Averadge value***")
+#print (state_sec.mean())
+#print ("*** Minimum value***")
+#print (state_sec.min())
+#print ("*** Maximum value***")
+#print (state_sec.max())
+#print ("*** Mode value***")
+#print (state_sec.mode())
+#print ("*** Rannge ***")
 
 
 # what to plot... Kindly check the csv is location. As of now I am using my local file
 data = np.genfromtxt('/home/alok/projects/cii/ciids.csv', delimiter=',', names=['x', 'y'])
 # Initialize a Figure
 fig = plt.figure()
-plt.plot(state_sec['year'],'g^', state_sec['cii'],'ro')
+plt.plot(state_sec['Year'],'g^', state_sec['CII'],'ro')
 
-plt.title('Cost inflation Index w.r.t year chart')
-plt.ylabel('Years')
-plt.xlabel('CII ')
-plt.grid(True)
+plt.title('Year wise Cost inflation Index')
+plt.ylabel('Year')
+plt.xlabel('Cost inflation Index')
+plt.grid(False)
 plt.show()
